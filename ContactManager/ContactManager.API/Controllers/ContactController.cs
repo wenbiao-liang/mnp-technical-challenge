@@ -13,19 +13,12 @@ namespace ContactManager.API.Controllers
     [Route("[controller]")]
     public class ContactController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
         private readonly ILogger<ContactController> _logger;
         private readonly IContactRepository _contactRepository;
-        private readonly ICompanyRepository _companyRepository;
-        public ContactController(ILogger<ContactController> logger, IContactRepository contactRepository, ICompanyRepository companyRepository)
+        public ContactController(ILogger<ContactController> logger, IContactRepository contactRepository)
         {
             _logger = logger;
             _contactRepository = contactRepository;
-            _companyRepository = companyRepository;
         }
 
         [HttpGet]
@@ -34,11 +27,6 @@ namespace ContactManager.API.Controllers
             return await _contactRepository.Contacts();
         }
 
-        [HttpGet("Companies")]
-        public async Task<IEnumerable<Company>> GetCompanies(bool isActive)
-        {
-            return await _companyRepository.Companies(isActive);
-        }
         [HttpPut("Contact/Update")]
         public async Task<RequestResult<Contact>> UpdateContact(Contact contact)
         {
