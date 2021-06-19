@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace ContactManager.API.Controllers
@@ -24,13 +25,46 @@ namespace ContactManager.API.Controllers
         [HttpGet]
         public async Task<IEnumerable<Contact>> Get()
         {
-            return await _contactRepository.Contacts();
+            var result = await _contactRepository.Contacts();
+            return result;
         }
 
         [HttpPut("Contact/Update")]
-        public async Task<RequestResult<Contact>> UpdateContact(Contact contact)
+        public async Task<ActionResult<RequestResult<Contact>>> UpdateContact(Contact contact)
         {
-            return await _contactRepository.UpsertContact(contact);
+            var result = true;
+            var errorMessage = string.Empty;
+            if (contact == null || !contact.IsValid(out errorMessage))
+            {
+                result = false;
+            }
+            else
+            {
+                // with dbContext, all these are not necessary
+                var fakeContacts = await _contactRepository.GetContacts();
+                var existing = await Task.Run(() => fakeContacts.FirstOrDefault(c => c.Id == contact.Id));
+                if (contact.Id == 0 || existing == null)
+                {
+                    // simulate one business fail case
+                    if (fakeContacts.Any(c => c.Name == contact.Name))
+                    {
+                        result = false;
+                        errorMessage = $"Contact with the same name already exists.";
+                    }
+                    else
+                    {
+                        // insert, pretend async
+                        contact = await _contactRepository.InsertContact(contact);
+                    }
+                }
+                else
+                {
+                    // update
+                    contact = await _contactRepository.UpdateContact(contact);
+                }
+            }
+
+            return new RequestResult<Contact>() { Data = contact, Result = result, ErrorMessage = errorMessage };
         }
     }
 }

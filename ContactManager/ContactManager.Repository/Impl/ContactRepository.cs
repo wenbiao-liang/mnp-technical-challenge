@@ -19,55 +19,50 @@ namespace ContactManager.Repository.Impl
             new Contact() { Id= 1, Name = "Wolter Disney", Title = "Founder & CEO", Company = "Disney", Phone = "444-444-5599", Address = "123 anywhere road", Email = "g.g@disney.com", LastDateContacted = new DateTime(2021,06, 22)},
             new Contact() { Id= 2, Name = "Mary Smith", Title= "VP Finance", Company = "HP", Phone = "433-544-5599", Address = "999 somewhere street NW", Email = "m.s@hp.com", LastDateContacted = new DateTime(2003,06, 22)},
         };
+        // remove after porting to use DB
+        public virtual async Task<List<Contact>> GetContacts()
+        {
+            return await Task.Run(() => _fakeContacts);
+        }
 
+        //
         private readonly ILogger<ContactRepository> _logger;
         public ContactRepository(ILogger<ContactRepository> logger)
         {
             _logger = logger;
         }
 
-        public async Task<IEnumerable<Contact>> Contacts()
+        public virtual async Task<IEnumerable<Contact>> Contacts()
         {
-            return await Task.Run(() => _fakeContacts);
+            return await Task.Run(() => GetContacts());
         }
 
-        public async Task<RequestResult<Contact>> UpsertContact(Contact contact)
+        public virtual async Task<Contact> InsertContact(Contact contact)
         {
-            var result = true;
-            var errorMessage = string.Empty;
-            if (contact == null || !contact.IsValid(out errorMessage))
+            var contacts = await GetContacts();
+            // create a fakeId, not good for multiple insert?
+            contact.Id = contacts.Max(c => c.Id) + 1;
+
+            await Task.Run(() => contacts.Add(contact));
+
+            // in real db call, DB may add more attributes
+            return contact;
+        }
+        public virtual async Task<Contact> UpdateContact(Contact contact)
+        {
+            var contacts = await GetContacts();
+            var existing = contacts.FirstOrDefault(x => x.Id == contact.Id);
+            if (existing != null)
             {
-                result = false;
+                // Todo: replace this with db call
+                contact = await Task.Run(() => (Contact)contact.Clone());
             }
             else
             {
-                // with dbContext, all these are not necessary
-                var existing = await Task.Run(() => _fakeContacts.FirstOrDefault(c => c.Id == contact.Id));
-                if (contact.Id == 0 || existing == null)
-                {
-                    // create a fakeId, not good for multiple insert?
-                    contact.Id = _fakeContacts.Max(c => c.Id) + 1;
-
-                    // simulate one business fail case
-                    if (_fakeContacts.Any(c => c.Name == contact.Name))
-                    {
-                        result = false;
-                        errorMessage = $"Contact with the same name already exists.";
-                    }
-                    else
-                    {
-                        // insert, pretend async
-                        await Task.Run(() => _fakeContacts.Add(contact));
-                    }
-                }
-                else
-                {
-                    // update, pretend async
-                    existing = await Task.Run(() => (Contact)contact.Clone());
-                }
+                contact = await InsertContact(contact);
             }
 
-            return new RequestResult<Contact>() { Data = contact, Result = result, ErrorMessage = errorMessage };
+            return contact;
         }
     }
 }

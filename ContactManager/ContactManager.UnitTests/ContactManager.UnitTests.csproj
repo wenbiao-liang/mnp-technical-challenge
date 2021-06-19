@@ -22,7 +22,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ControllerTests\" />
+    <ProjectReference Include="..\ContactManager.API\ContactManager.API.csproj" />
+    <ProjectReference Include="..\ContactManager.Repository\ContactManager.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="RepositoryTests\" />
   </ItemGroup>
 
 </Project>

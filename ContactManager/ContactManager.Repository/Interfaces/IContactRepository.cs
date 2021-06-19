@@ -9,7 +9,9 @@ namespace ContactManager.Repository.Interfaces
 {
     public interface IContactRepository
     {
+        Task<List<Contact>> GetContacts();
         Task<IEnumerable<Contact>> Contacts();
-        Task<RequestResult<Contact>> UpsertContact(Contact contact);
+        Task<Contact> InsertContact(Contact contact);
+        Task<Contact> UpdateContact(Contact contact);
     }
 }

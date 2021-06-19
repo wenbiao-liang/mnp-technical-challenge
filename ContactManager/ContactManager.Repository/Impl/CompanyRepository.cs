@@ -23,8 +23,7 @@ namespace ContactManager.Repository.Impl
         };
         public async Task<IEnumerable<Company>> Companies(bool isActive)
         {
-
-            return await Task.Run(() => _fakeCompanies.Where(c => isActive ? c.IsActive == true : true));
+            return await Task.Run(() => _fakeCompanies.Where(c => isActive ? c.IsActive == true : true).OrderBy(x => x.Name));
         }
     }
 }
