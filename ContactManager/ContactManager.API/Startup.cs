@@ -26,12 +26,12 @@ namespace ContactManager.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ContactManager.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MNP.ContactManager.API", Version = "v1" });
             });
+            //services.AddTransient<>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

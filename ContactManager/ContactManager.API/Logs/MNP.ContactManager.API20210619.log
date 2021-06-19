@@ -1,0 +1,29 @@
+2021-06-19 09:25:36.008 -06:00 [INF] API Starting up.
+2021-06-19 09:25:37.300 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-19 09:25:37.308 -06:00 [INF] Hosting environment: Development
+2021-06-19 09:25:37.313 -06:00 [INF] Content root path: C:\Users\Wenbiao\source\repos\mnp-technical-challenge\ContactManager\ContactManager.API
+2021-06-19 09:25:37.331 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger - -
+2021-06-19 09:25:37.380 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger/index.html - -
+2021-06-19 09:25:37.400 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger - - - 301 - - 70.8100ms
+2021-06-19 09:25:37.493 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger/index.html - - - 200 - text/html;charset=utf-8 112.5774ms
+2021-06-19 09:25:37.512 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger/swagger-ui-bundle.js - -
+2021-06-19 09:25:37.514 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger/swagger-ui-standalone-preset.js - -
+2021-06-19 09:25:37.514 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger/swagger-ui.css - -
+2021-06-19 09:25:37.557 -06:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-06-19 09:25:37.557 -06:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-06-19 09:25:37.557 -06:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-06-19 09:25:37.560 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger/swagger-ui.css - - - 200 143410 text/css 45.9962ms
+2021-06-19 09:25:37.565 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger/swagger-ui-standalone-preset.js - - - 200 336841 application/javascript 51.3418ms
+2021-06-19 09:25:37.577 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger/swagger-ui-bundle.js - - - 200 1097461 application/javascript 65.0579ms
+2021-06-19 09:25:37.786 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger/v1/swagger.json - -
+2021-06-19 09:25:37.871 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger/favicon-32x32.png - -
+2021-06-19 09:25:37.872 -06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-06-19 09:25:37.873 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger/favicon-32x32.png - - - 200 628 image/png 1.7671ms
+2021-06-19 09:25:37.874 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 87.6753ms
+2021-06-19 09:25:45.885 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/Contact - -
+2021-06-19 09:25:45.909 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 09:25:45.923 -06:00 [INF] Route matched with {action = "Get", controller = "Contact"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[ContactManager.API.WeatherForecast] Get() on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 09:25:45.929 -06:00 [INF] Executing ObjectResult, writing value of type 'ContactManager.API.WeatherForecast[]'.
+2021-06-19 09:25:45.944 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.Get (ContactManager.API) in 16.6667ms
+2021-06-19 09:25:45.945 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 09:25:45.946 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/Contact - - - 200 - application/json;+charset=utf-8 61.6783ms
