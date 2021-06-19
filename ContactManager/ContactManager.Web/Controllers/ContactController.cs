@@ -20,7 +20,7 @@ namespace ContactManager.Web.Controllers
         {
             var model = new dtoContact()
             {
-                ID = 0,
+                Id = 0,
                 Name = "",
                 Title = "",
                 Company = "",
@@ -59,7 +59,7 @@ namespace ContactManager.Web.Controllers
         {
             var model = new dtoContact()
             {
-                ID = ID,
+                Id = ID,
                 Name = "",
                 Title = "",
                 Company = "",

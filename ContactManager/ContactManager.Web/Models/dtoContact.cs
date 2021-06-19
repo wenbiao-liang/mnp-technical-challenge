@@ -11,7 +11,8 @@ namespace ContactManager.Web.Models
     // two views may have different requirements, but it seems our Edit/Create views ask for the same fields
     public class dtoContact
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
+
         [Display(Name="Name")]
         [Required(ErrorMessage = "Name is a required field.")]
         [StringLength(50, ErrorMessage ="Contact name should be between 5 and 50 characters", MinimumLength = 5)]
