@@ -7,3 +7,5 @@
 /ContactManager/packages
 /ContactManager/ContactManager.API/bin/Debug/net5.0
 /ContactManager/ContactManager.API/obj
+/ContactManager/ContactManager.Repository/bin/Debug/net5.0
+/ContactManager/ContactManager.Repository/obj
