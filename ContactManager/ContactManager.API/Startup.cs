@@ -1,3 +1,5 @@
+using ContactManager.Repository.Impl;
+using ContactManager.Repository.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,7 +33,8 @@ namespace ContactManager.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MNP.ContactManager.API", Version = "v1" });
             });
-            //services.AddTransient<>();
+            services.AddTransient<IContactRepository, ContactRepository>();
+            services.AddTransient<ICompanyRepository, CompanyRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

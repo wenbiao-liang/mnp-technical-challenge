@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ContactManager.Repository.Interfaces;
+using ContactManager.Repository.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -17,23 +19,30 @@ namespace ContactManager.API.Controllers
         };
 
         private readonly ILogger<ContactController> _logger;
-
-        public ContactController(ILogger<ContactController> logger)
+        private readonly IContactRepository _contactRepository;
+        private readonly ICompanyRepository _companyRepository;
+        public ContactController(ILogger<ContactController> logger, IContactRepository contactRepository, ICompanyRepository companyRepository)
         {
             _logger = logger;
+            _contactRepository = contactRepository;
+            _companyRepository = companyRepository;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<IEnumerable<Contact>> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            return await _contactRepository.Contacts();
+        }
+
+        [HttpGet("Companies")]
+        public async Task<IEnumerable<Company>> GetCompanies(bool isActive)
+        {
+            return await _companyRepository.Companies(isActive);
+        }
+        [HttpPut("Contact/Update")]
+        public async Task<RequestResult<Contact>> UpdateContact(Contact contact)
+        {
+            return await _contactRepository.UpsertContact(contact);
         }
     }
 }
