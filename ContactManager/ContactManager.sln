@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.Web", "ContactManager.Web\ContactManager.Web.csproj", "{4D63ABCB-7B6D-466E-B5B7-9F3C3FD2F6DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.API", "ContactManager.API\ContactManager.API.csproj", "{08406477-A61A-4563-B659-EA550EE0522F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4D63ABCB-7B6D-466E-B5B7-9F3C3FD2F6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D63ABCB-7B6D-466E-B5B7-9F3C3FD2F6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D63ABCB-7B6D-466E-B5B7-9F3C3FD2F6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08406477-A61A-4563-B659-EA550EE0522F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08406477-A61A-4563-B659-EA550EE0522F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08406477-A61A-4563-B659-EA550EE0522F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08406477-A61A-4563-B659-EA550EE0522F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
