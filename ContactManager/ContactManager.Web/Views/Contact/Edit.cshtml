@@ -1,0 +1,100 @@
+﻿@model ContactManager.Web.Models.dtoContact
+
+@{
+    ViewBag.Title = "MNP Contact Manager - Edit Contact";
+}
+
+@using (Html.BeginForm("Edit", "Contact", FormMethod.Post))
+{
+<fieldset class="border p-2">
+    <legend class="w-auto">Contact Details</legend>
+    @Html.AntiForgeryToken()
+
+    <div class="control-group">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(m => Model.ID)
+        @Html.ValidationSummary(true)
+
+        <div class="container my-container">
+            <div class="row my-row justify-content-left">
+                <div class="col-sm-4 my-col">
+                    @Html.LabelFor(m => Model.Name, new { @class = "col-sm-2 col-form-label col-form-label-sm text-left justify-content-start" })
+                    <div class="col-sm-2">
+                        @Html.EditorFor(m => Model.Name)
+                        @Html.ValidationMessageFor(m => Model.Name)
+                    </div>
+                </div>
+                <div class="col-sm-4  my-col">
+                    @Html.LabelFor(m => Model.Address, new { @class = "col-sm-3 col-form-label col-form-label-sm text-left justify-content-start" })
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(m => Model.Address)
+                        @Html.ValidationMessageFor(m => Model.Address)
+                    </div>
+                </div>
+
+                <div class="col-sm-4  my-col">
+                    @Html.LabelFor(m => Model.LastDateContacted, new { @class = "col-sm-2 col-form-label col-form-label-sm text-left justify-content-start" })
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(m => Model.LastDateContacted)
+                        @Html.ValidationMessageFor(m => Model.LastDateContacted)
+                    </div>
+                </div>
+                </div>
+
+            <div class="row my-row justify-content-right glyphicon-align-center">
+                <div class="col-sm-4  my-col">
+                    @Html.LabelFor(m => Model.Title, new { @class = "col-sm-4 col-form-label col-form-label-sm text-left justify-content-start" })
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(m => Model.Title)
+                        @Html.ValidationMessageFor(m => Model.Title)
+                    </div>
+                </div>
+                <div class="col-sm-4  my-col">
+                    @Html.LabelFor(m => Model.Phone)
+                    @Html.TextBoxFor(m => Model.Phone)
+                    @Html.ValidationMessageFor(m => Model.Phone)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4  my-col">
+                    @Html.LabelFor(m => Model.Company, new { @class = "col-sm-3 col-form-label col-form-label-sm text-left justify-content-start" })
+                    @Html.TextBoxFor(m => Model.Company)
+                    @Html.ValidationMessageFor(m => Model.Company)
+                </div>
+                <div class="col-sm-4 my-col">
+                    @Html.LabelFor(m => Model.Email)
+                    @Html.TextBoxFor(m => Model.Email)
+                    @Html.ValidationMessageFor(m => Model.Email)
+                </div>
+                <div class="col-sm-4 my-col">
+                    @Html.LabelFor(m => Model.Comments)
+                    @Html.TextBoxFor(m => Model.Comments)
+                    @Html.ValidationMessageFor(m => Model.Comments)
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="form-group padding-right-sm">
+                <div class="col-sm-offset-2 col-sm-12 col-sm-pull-4">
+                    <input type="button" value="Cancel" class="btn btn-default pull-right padding-right-sm" onclick="location.href = '/Home/Index'" />
+                    <input type="submit" value="Create" class="btn btn-default pull-right" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </fieldset>
+}
+
+<style>
+    .my-container {
+        border:1px solid green;
+    }
+    .my-row {
+        border: 1px solid red;
+        height: 100px
+
+    }
+    .my-col {
+        border: 1px solid blue;
+    }
+</style>

@@ -1,0 +1,74 @@
+﻿@model List<ContactManager.Web.Models.dtoContact>
+@{
+    ViewBag.Title = "MNP Contact Manager";
+}
+
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    @using (Html.BeginForm("New", "Contact", FormMethod.Get))
+    {
+        <input type="submit" value="Create New Contact" />
+    }
+</div>
+
+<br />
+<div>
+    <table class="table table-striped">
+        <tr>
+            <th></th>
+            <th>Name<br /> (job title)</th>
+            <th>Company</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Last Date Contacted</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr onclick="location.href = '@(Url.Action("Edit", "Contact", new { Id = item.ID }))'">
+            <td>
+                @Html.HiddenFor(m => item.ID)
+            </td>
+            <td>
+                <div class="">
+                    @{
+                        var nameTitle = item.Name + "<br/>" + item.Title;
+                        @Html.Raw(nameTitle)
+                    }
+                </div>
+            </td>
+            <td>
+                <div class="">
+                    @Html.DisplayFor(m=>item.Company)
+                </div>
+            </td>
+            <td>
+                <div class="">
+                    @Html.DisplayFor(m => item.Phone)
+                </div>
+            </td>
+            <td>
+                <div class="">
+                    @Html.DisplayFor(m=>item.Address)
+                </div>
+            </td>
+            <td>
+                <div class="">
+                    @Html.DisplayFor(m=>item.Email)
+                </div>
+            </td>
+            <td>
+                <div class="">
+                    @Html.DisplayFor(m => item.LastDateContacted)
+                </div>
+            </td>
+        </tr>
+        }
+    </table>
+</div>
+

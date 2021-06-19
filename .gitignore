@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ContactManager/ContactManager.Web/bin
+/ContactManager/ContactManager.Web/obj/Debug
+/ContactManager/packages
