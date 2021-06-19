@@ -9,3 +9,5 @@
 /ContactManager/ContactManager.API/obj
 /ContactManager/ContactManager.Repository/bin/Debug/net5.0
 /ContactManager/ContactManager.Repository/obj
+/ContactManager/ContactManager.UnitTests/bin/Debug/net5.0
+/ContactManager/ContactManager.UnitTests/obj

@@ -20,21 +20,26 @@ namespace ContactManager.Web.Models
 
         [Display(Name = "Job Title")]
         [Required(ErrorMessage = "Title is a required field.")]
+        [StringLength(50, ErrorMessage = "Contact title should be between 3 and 50 characters", MinimumLength = 3)]
         public string Title { get; set; }
 
         [Display(Name = "Company")]
         [Required(ErrorMessage = "Company is a required field.")]
+        [StringLength(50, ErrorMessage ="Contact company should be less than 50 characters")]
         public string Company { get; set; }
 
         [Display(Name = "Phone")]
         [Phone]
+        [StringLength(50)]
         public string Phone { get; set; }
 
         [Display(Name = "Address")]
+        [StringLength(100)]
         public string Address { get; set; }
 
         [Display(Name = "Email")]
         [EmailAddress]
+        [StringLength(255)]
         public string Email { get; set; }
 
         [Display(Name = "Last Date Contacted")]
