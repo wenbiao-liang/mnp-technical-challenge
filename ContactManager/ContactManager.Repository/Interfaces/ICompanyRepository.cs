@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace ContactManager.Repository.Interfaces
 {
-    public interface IContactRepository
+    public interface ICompanyRepository
     {
-        Task<IEnumerable<Contact>> Contacts();
-        Task<RequestResult<Contact>> UpsertContact(Contact contact);
+        Task<IEnumerable<Company>> Companies(bool isActive);
     }
 }
