@@ -39,8 +39,8 @@ namespace ContactManager.UnitTests.RepositoryTests
             var companyController = new CompanyController(
                 _loggerMock.Object,
                 _companyRepositoryMock.Object);
-            var actionResult0 = await companyController.GetCompanies(true);
-            var actionResult1 = await companyController.GetCompanies(false);
+            var actionResult0 = await companyController.Get(true);
+            var actionResult1 = await companyController.Get(false);
 
             // Assert
             var result = Assert.IsAssignableFrom<IEnumerable<Company>>(actionResult0);

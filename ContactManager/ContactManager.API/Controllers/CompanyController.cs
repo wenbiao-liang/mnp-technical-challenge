@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace ContactManager.API.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class CompanyController : ControllerBase
     {
         private readonly ILogger<CompanyController> _logger;
@@ -18,8 +20,8 @@ namespace ContactManager.API.Controllers
             _logger = logger;
             _companyRepository = companyRepository;
         }
-        [HttpGet("Companies")]
-        public async Task<IEnumerable<Company>> GetCompanies(bool isActive)
+        [HttpGet]
+        public async Task<IEnumerable<Company>> Get(bool isActive)
         {
             return await _companyRepository.Companies(isActive);
         }

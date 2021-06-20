@@ -9,7 +9,11 @@ namespace ContactManager.Repository.Interfaces
 {
     public interface IContactRepository
     {
+        // Temp function to fake DbContext
         Task<List<Contact>> GetContacts();
+
+        //
+        Task<Contact> GetContactById(int Id);
         Task<IEnumerable<Contact>> Contacts();
         Task<Contact> InsertContact(Contact contact);
         Task<Contact> UpdateContact(Contact contact);

@@ -19,7 +19,7 @@ namespace ContactManager.Repository.Impl
             new Contact() { Id= 1, Name = "Wolter Disney", Title = "Founder & CEO", Company = "Disney", Phone = "444-444-5599", Address = "123 anywhere road", Email = "g.g@disney.com", LastDateContacted = new DateTime(2021,06, 22)},
             new Contact() { Id= 2, Name = "Mary Smith", Title= "VP Finance", Company = "HP", Phone = "433-544-5599", Address = "999 somewhere street NW", Email = "m.s@hp.com", LastDateContacted = new DateTime(2003,06, 22)},
         };
-        // remove after porting to use DB
+        // remove this after porting to use DB
         public virtual async Task<List<Contact>> GetContacts()
         {
             return await Task.Run(() => _fakeContacts);
@@ -35,6 +35,12 @@ namespace ContactManager.Repository.Impl
         public virtual async Task<IEnumerable<Contact>> Contacts()
         {
             return await Task.Run(() => GetContacts());
+        }
+
+        public virtual async Task<Contact> GetContactById(int Id)
+        {
+            var contacts = await GetContacts();
+            return contacts.FirstOrDefault(c => c.Id == Id);
         }
 
         public virtual async Task<Contact> InsertContact(Contact contact)
@@ -55,7 +61,11 @@ namespace ContactManager.Repository.Impl
             if (existing != null)
             {
                 // Todo: replace this with db call
-                contact = await Task.Run(() => (Contact)contact.Clone());
+                await Task.Run(() =>
+                {
+                    contacts.Remove(existing);
+                    contacts.Add(contact);
+                });
             }
             else
             {

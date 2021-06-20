@@ -28,8 +28,13 @@ namespace ContactManager.API.Controllers
             var result = await _contactRepository.Contacts();
             return result;
         }
+        [HttpGet("ID/{Id}")]
+        public async Task<Contact> GetById(int Id)
+        {
+            return await _contactRepository.GetContactById(Id);
+        }
 
-        [HttpPut("Contact/Update")]
+        [HttpPut("Update")]
         public async Task<ActionResult<RequestResult<Contact>>> UpdateContact(Contact contact)
         {
             var result = true;

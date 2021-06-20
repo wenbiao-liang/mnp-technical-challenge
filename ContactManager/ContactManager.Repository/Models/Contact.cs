@@ -53,7 +53,7 @@ namespace ContactManager.Repository.Models
             {
                 sbError.AppendLine($"Contact company cannot be longer than 50 characters");
             }
-            if (!string.IsNullOrWhiteSpace(Comments) && Email.Length > 255)
+            if (!string.IsNullOrWhiteSpace(Comments) && Comments.Length > 255)
             {
                 sbError.AppendLine($"Contact email cannot be longer than 255 characters");
             }
