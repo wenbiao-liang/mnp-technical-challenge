@@ -23,10 +23,13 @@ namespace ContactManager.Web.UnitTests
         [TestMethod]
         public void TestIndexView()
         {
+            // Arrange
             var controller = SetupController() as HomeController;
 
+            // Act
             var result = controller.Index().Result;
 
+            // Assert
             Assert.IsInstanceOfType(result, typeof(ViewResultBase));
             var viewResult = (ViewResultBase)result;
             Assert.AreEqual("Index", viewResult.ViewName);
@@ -36,15 +39,18 @@ namespace ContactManager.Web.UnitTests
             var model = viewResult.Model as List<dtoContact>;
             Assert.IsNotNull(model);
 
-            Assert.AreEqual(2, model.Count);    // Can I be so sure?
+            Assert.AreNotEqual(0, model.Count);
         }
         [TestMethod]
         public void TestHomeViewAbout()
         {
+            // Arrange
             var controller = SetupController() as HomeController;
 
+            // Act
             var result = controller.About();
 
+            // Assert
             Assert.IsInstanceOfType(result, typeof(ViewResultBase));
             var viewResult = (ViewResultBase)result;
             Assert.AreEqual("About", viewResult.ViewName);
@@ -55,10 +61,13 @@ namespace ContactManager.Web.UnitTests
         [TestMethod]
         public void TestHomeViewContact()
         {
+            // Arrange
             var controller = SetupController() as HomeController;
 
+            // Act
             var result = controller.Contact();
 
+            // Assert
             Assert.IsInstanceOfType(result, typeof(ViewResultBase));
             var viewResult = (ViewResultBase)result;
             Assert.AreEqual("Contact", viewResult.ViewName);

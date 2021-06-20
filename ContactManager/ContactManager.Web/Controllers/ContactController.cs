@@ -49,7 +49,7 @@ namespace ContactManager.Web.Controllers
 
                 ModelState.AddModelError("", requestResult.ErrorMessage);
                 contact.Companies = await GetCompanies();
-                return View(contact);
+                return View(viewName, contact);
             }
             contact.Companies = await GetCompanies();
             return View(viewName, contact);

@@ -183,7 +183,7 @@ namespace ContactManager.UnitTests
 
             Assert.NotNull(result);
             Assert.False(result.Result);
-            Assert.Equal($"Contact with the same name already exists.", result.ErrorMessage);
+            Assert.NotEqual(-1, result.ErrorMessage.IndexOf("name"));
         }
 
         [Fact]
