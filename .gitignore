@@ -11,3 +11,5 @@
 /ContactManager/ContactManager.Repository/obj
 /ContactManager/ContactManager.UnitTests/bin/Debug/net5.0
 /ContactManager/ContactManager.UnitTests/obj
+/ContactManager/ContactManager.Web.UnitTests/bin/Debug
+/ContactManager/ContactManager.Web.UnitTests/obj/Debug

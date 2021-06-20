@@ -1613,3 +1613,258 @@ System.InvalidOperationException: Unable to resolve service for type 'ContactMan
 2021-06-19 20:28:13.735 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.Get (ContactManager.API) in 2.8482ms
 2021-06-19 20:28:13.735 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
 2021-06-19 20:28:13.735 -06:00 [INF] Request finished HTTP/1.1 GET https://localhost:44308/Contact - - - 200 - application/json;+charset=utf-8 3.7160ms
+2021-06-19 22:23:54.830 -06:00 [INF] API Starting up.
+2021-06-19 22:23:56.148 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-19 22:23:56.151 -06:00 [INF] Hosting environment: Development
+2021-06-19 22:23:56.152 -06:00 [INF] Content root path: C:\Users\Wenbiao\source\repos\mnp-technical-challenge\ContactManager\ContactManager.API
+2021-06-19 22:23:56.169 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger/index.html - -
+2021-06-19 22:23:56.314 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger/index.html - - - 200 - text/html;charset=utf-8 146.3364ms
+2021-06-19 22:23:56.493 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger/v1/swagger.json - -
+2021-06-19 22:23:56.577 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 80.6000ms
+2021-06-19 22:24:41.884 -06:00 [INF] API Starting up.
+2021-06-19 22:24:42.808 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-19 22:24:42.821 -06:00 [INF] Hosting environment: Development
+2021-06-19 22:24:42.822 -06:00 [INF] Content root path: C:\Users\Wenbiao\source\repos\mnp-technical-challenge\ContactManager\ContactManager.API
+2021-06-19 22:24:42.835 -06:00 [INF] Request starting HTTP/1.1 GET https://localhost:44308/Contact - -
+2021-06-19 22:24:42.835 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger/index.html - -
+2021-06-19 22:24:42.885 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:24:42.914 -06:00 [INF] Route matched with {action = "Get", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Contact]] Get() on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 22:24:42.950 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContactManager.Repository.Models.Contact, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-19 22:24:42.951 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger/index.html - - - 200 - text/html;charset=utf-8 118.6961ms
+2021-06-19 22:24:42.986 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.Get (ContactManager.API) in 61.7493ms
+2021-06-19 22:24:42.988 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:24:42.990 -06:00 [INF] Request finished HTTP/1.1 GET https://localhost:44308/Contact - - - 200 - application/json;+charset=utf-8 158.8610ms
+2021-06-19 22:24:43.113 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger/v1/swagger.json - -
+2021-06-19 22:24:43.145 -06:00 [INF] Request starting HTTP/2 GET https://localhost:44308/swagger/favicon-32x32.png - -
+2021-06-19 22:24:43.161 -06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-06-19 22:24:43.162 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger/favicon-32x32.png - - - 200 628 image/png 16.6952ms
+2021-06-19 22:24:43.200 -06:00 [INF] Request finished HTTP/2 GET https://localhost:44308/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 86.4546ms
+2021-06-19 22:29:30.092 -06:00 [INF] API Starting up.
+2021-06-19 22:29:31.190 -06:00 [INF] Now listening on: http://127.0.0.1:15622
+2021-06-19 22:29:31.193 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-19 22:29:31.193 -06:00 [INF] Hosting environment: Development
+2021-06-19 22:29:31.193 -06:00 [INF] Content root path: C:\Users\Wenbiao\source\repos\mnp-technical-challenge\ContactManager\ContactManager.API
+2021-06-19 22:29:31.337 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:6675/ - 0
+2021-06-19 22:29:31.337 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/swagger/index.html - -
+2021-06-19 22:29:31.353 -06:00 [INF] Request finished HTTP/1.1 DEBUG http://localhost:6675/ - 0 - 200 0 - 17.0240ms
+2021-06-19 22:29:31.444 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/swagger/index.html - - - 200 - text/html;charset=utf-8 109.4745ms
+2021-06-19 22:29:31.697 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/swagger/v1/swagger.json - -
+2021-06-19 22:29:31.786 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 87.9378ms
+2021-06-19 22:29:38.768 -06:00 [INF] API Starting up.
+2021-06-19 22:29:39.041 -06:00 [INF] Now listening on: http://127.0.0.1:22614
+2021-06-19 22:29:39.043 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-19 22:29:39.044 -06:00 [INF] Hosting environment: Development
+2021-06-19 22:29:39.044 -06:00 [INF] Content root path: C:\Users\Wenbiao\source\repos\mnp-technical-challenge\ContactManager\ContactManager.API
+2021-06-19 22:29:39.317 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/swagger/index.html - -
+2021-06-19 22:29:39.380 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/swagger/index.html - - - 200 - text/html;charset=utf-8 64.4580ms
+2021-06-19 22:29:39.480 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/swagger/v1/swagger.json - -
+2021-06-19 22:29:39.514 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/swagger/favicon-32x32.png - -
+2021-06-19 22:29:39.522 -06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-06-19 22:29:39.522 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/swagger/favicon-32x32.png - - - 200 628 image/png 8.0597ms
+2021-06-19 22:29:39.543 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 63.2665ms
+2021-06-19 22:29:40.588 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/swagger/index.html - -
+2021-06-19 22:29:40.589 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/swagger/index.html - - - 200 - text/html;charset=utf-8 1.3380ms
+2021-06-19 22:29:40.671 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/swagger/v1/swagger.json - -
+2021-06-19 22:29:40.674 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2.3068ms
+2021-06-19 22:29:40.713 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/swagger/favicon-32x32.png - -
+2021-06-19 22:29:40.713 -06:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-06-19 22:29:40.713 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/swagger/favicon-32x32.png - - - 200 628 image/png 0.7937ms
+2021-06-19 22:29:50.361 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact - -
+2021-06-19 22:29:50.380 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:29:50.397 -06:00 [INF] Route matched with {action = "Get", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Contact]] Get() on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 22:29:50.404 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContactManager.Repository.Models.Contact, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-19 22:29:50.417 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.Get (ContactManager.API) in 15.1138ms
+2021-06-19 22:29:50.419 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:29:50.420 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact - - - 200 - application/json;+charset=utf-8 59.5374ms
+2021-06-19 22:32:18.482 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact - -
+2021-06-19 22:32:18.483 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:32:18.483 -06:00 [INF] Route matched with {action = "Get", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Contact]] Get() on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 22:32:18.485 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContactManager.Repository.Models.Contact, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-19 22:32:18.485 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.Get (ContactManager.API) in 1.4446ms
+2021-06-19 22:32:18.485 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:32:18.485 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact - - - 200 - application/json;+charset=utf-8 3.5339ms
+2021-06-19 22:34:07.478 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact - -
+2021-06-19 22:34:07.478 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:34:07.478 -06:00 [INF] Route matched with {action = "Get", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Contact]] Get() on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 22:34:07.479 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContactManager.Repository.Models.Contact, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-19 22:34:07.479 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.Get (ContactManager.API) in 0.5649ms
+2021-06-19 22:34:07.479 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:34:07.479 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact - - - 200 - application/json;+charset=utf-8 1.3645ms
+2021-06-19 22:35:00.707 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact - -
+2021-06-19 22:35:00.707 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:35:00.707 -06:00 [INF] Route matched with {action = "Get", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Contact]] Get() on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 22:35:00.708 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContactManager.Repository.Models.Contact, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-19 22:35:00.708 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.Get (ContactManager.API) in 0.7117ms
+2021-06-19 22:35:00.708 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:35:00.708 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact - - - 200 - application/json;+charset=utf-8 1.3758ms
+2021-06-19 22:35:34.770 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact - -
+2021-06-19 22:35:34.770 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:35:34.770 -06:00 [INF] Route matched with {action = "Get", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Contact]] Get() on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 22:35:34.770 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContactManager.Repository.Models.Contact, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-19 22:35:34.771 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.Get (ContactManager.API) in 0.3571ms
+2021-06-19 22:35:34.771 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 22:35:34.771 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact - - - 200 - application/json;+charset=utf-8 1.0191ms
+2021-06-19 23:02:54.788 -06:00 [INF] API Starting up.
+2021-06-19 23:02:55.086 -06:00 [INF] Now listening on: http://127.0.0.1:13372
+2021-06-19 23:02:55.089 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-19 23:02:55.089 -06:00 [INF] Hosting environment: Development
+2021-06-19 23:02:55.089 -06:00 [INF] Content root path: C:\Users\Wenbiao\source\repos\mnp-technical-challenge\ContactManager\ContactManager.API
+2021-06-19 23:02:55.312 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Company?isActive=True - -
+2021-06-19 23:02:55.404 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.CompanyController.Get (ContactManager.API)'
+2021-06-19 23:02:55.438 -06:00 [INF] Route matched with {action = "Get", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Company]] Get(Boolean) on controller ContactManager.API.Controllers.CompanyController (ContactManager.API).
+2021-06-19 23:02:55.458 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Linq.OrderedEnumerable`2[[ContactManager.Repository.Models.Company, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-19 23:02:55.483 -06:00 [INF] Executed action ContactManager.API.Controllers.CompanyController.Get (ContactManager.API) in 42.0615ms
+2021-06-19 23:02:55.485 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.CompanyController.Get (ContactManager.API)'
+2021-06-19 23:02:55.488 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Company?isActive=True - - - 200 - application/json;+charset=utf-8 180.0981ms
+2021-06-19 23:03:16.127 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact - -
+2021-06-19 23:03:16.129 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 23:03:16.132 -06:00 [INF] Route matched with {action = "Get", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Contact]] Get() on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:03:16.135 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ContactManager.Repository.Models.Contact, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-06-19 23:03:16.139 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.Get (ContactManager.API) in 7.0975ms
+2021-06-19 23:03:16.139 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.Get (ContactManager.API)'
+2021-06-19 23:03:16.140 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact - - - 200 - application/json;+charset=utf-8 12.9147ms
+2021-06-19 23:03:21.682 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Company?isActive=True - -
+2021-06-19 23:03:21.683 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.CompanyController.Get (ContactManager.API)'
+2021-06-19 23:03:21.684 -06:00 [INF] Route matched with {action = "Get", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Company]] Get(Boolean) on controller ContactManager.API.Controllers.CompanyController (ContactManager.API).
+2021-06-19 23:03:21.685 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Linq.OrderedEnumerable`2[[ContactManager.Repository.Models.Company, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-19 23:03:21.685 -06:00 [INF] Executed action ContactManager.API.Controllers.CompanyController.Get (ContactManager.API) in 1.0454ms
+2021-06-19 23:03:21.685 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.CompanyController.Get (ContactManager.API)'
+2021-06-19 23:03:21.685 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Company?isActive=True - - - 200 - application/json;+charset=utf-8 2.7733ms
+2021-06-19 23:07:02.434 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - -
+2021-06-19 23:07:02.434 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:07:02.438 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:07:02.441 -06:00 [INF] Executing ObjectResult, writing value of type 'null'.
+2021-06-19 23:07:02.441 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 2.5069ms
+2021-06-19 23:07:02.441 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:07:02.441 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - - - 204 0 - 7.3912ms
+2021-06-19 23:10:19.286 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - -
+2021-06-19 23:10:19.287 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:10:19.287 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:10:19.288 -06:00 [INF] Executing ObjectResult, writing value of type 'null'.
+2021-06-19 23:10:19.288 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 0.7365ms
+2021-06-19 23:10:19.288 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:10:19.288 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - - - 204 0 - 2.4424ms
+2021-06-19 23:10:33.106 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - -
+2021-06-19 23:10:33.106 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:10:33.107 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:10:33.107 -06:00 [INF] Executing ObjectResult, writing value of type 'null'.
+2021-06-19 23:10:33.107 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 0.7217ms
+2021-06-19 23:10:33.108 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:10:33.108 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - - - 204 0 - 1.5808ms
+2021-06-19 23:10:57.355 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - -
+2021-06-19 23:10:57.355 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:10:57.355 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:10:57.356 -06:00 [INF] Executing ObjectResult, writing value of type 'null'.
+2021-06-19 23:10:57.356 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 0.8133ms
+2021-06-19 23:10:57.356 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:10:57.357 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - - - 204 0 - 1.4664ms
+2021-06-19 23:11:23.226 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - -
+2021-06-19 23:11:23.226 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:11:23.226 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:11:23.227 -06:00 [INF] Executing ObjectResult, writing value of type 'null'.
+2021-06-19 23:11:23.227 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 0.8769ms
+2021-06-19 23:11:23.227 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:11:23.227 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - - - 204 0 - 1.4685ms
+2021-06-19 23:11:39.185 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/1 - -
+2021-06-19 23:11:39.187 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:11:39.187 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:11:39.188 -06:00 [INF] Executing ObjectResult, writing value of type 'ContactManager.Repository.Models.Contact'.
+2021-06-19 23:11:39.189 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 2.3953ms
+2021-06-19 23:11:39.189 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:11:39.189 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/1 - - - 200 - application/json;+charset=utf-8 4.2693ms
+2021-06-19 23:11:40.317 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/1 - -
+2021-06-19 23:11:40.318 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:11:40.318 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:11:40.318 -06:00 [INF] Executing ObjectResult, writing value of type 'ContactManager.Repository.Models.Contact'.
+2021-06-19 23:11:40.318 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 0.4574ms
+2021-06-19 23:11:40.318 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:11:40.319 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/1 - - - 200 - application/json;+charset=utf-8 1.2625ms
+2021-06-19 23:12:10.985 -06:00 [INF] API Starting up.
+2021-06-19 23:12:11.270 -06:00 [INF] Now listening on: http://127.0.0.1:5197
+2021-06-19 23:12:11.273 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-06-19 23:12:11.274 -06:00 [INF] Hosting environment: Development
+2021-06-19 23:12:11.274 -06:00 [INF] Content root path: C:\Users\Wenbiao\source\repos\mnp-technical-challenge\ContactManager\ContactManager.API
+2021-06-19 23:12:11.445 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - -
+2021-06-19 23:12:11.491 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:12:11.517 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:12:11.533 -06:00 [INF] Executing ObjectResult, writing value of type 'null'.
+2021-06-19 23:12:11.537 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 16.3531ms
+2021-06-19 23:12:11.538 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:12:11.542 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - - - 204 0 - 99.4122ms
+2021-06-19 23:14:51.680 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - -
+2021-06-19 23:14:51.683 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:14:51.684 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:14:51.685 -06:00 [INF] Executing ObjectResult, writing value of type 'null'.
+2021-06-19 23:14:51.685 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 1.7352ms
+2021-06-19 23:14:51.686 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:14:51.686 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - - - 204 0 - 6.0638ms
+2021-06-19 23:15:08.676 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - -
+2021-06-19 23:15:08.676 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:15:08.677 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:15:08.677 -06:00 [INF] Executing ObjectResult, writing value of type 'null'.
+2021-06-19 23:15:08.677 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 0.5221ms
+2021-06-19 23:15:08.678 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:15:08.678 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - - - 204 0 - 2.1154ms
+2021-06-19 23:15:47.533 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - -
+2021-06-19 23:15:47.533 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:15:47.534 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:15:47.534 -06:00 [INF] Executing ObjectResult, writing value of type 'null'.
+2021-06-19 23:15:47.534 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 0.5657ms
+2021-06-19 23:15:47.534 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:15:47.535 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - - - 204 0 - 1.5369ms
+2021-06-19 23:15:52.967 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/1 - -
+2021-06-19 23:15:52.967 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:15:52.967 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:15:52.968 -06:00 [INF] Executing ObjectResult, writing value of type 'ContactManager.Repository.Models.Contact'.
+2021-06-19 23:15:52.989 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 21.4735ms
+2021-06-19 23:15:52.989 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:15:52.989 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/1 - - - 200 - application/json;+charset=utf-8 22.3238ms
+2021-06-19 23:16:08.966 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Company?isActive=True - -
+2021-06-19 23:16:08.966 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.CompanyController.Get (ContactManager.API)'
+2021-06-19 23:16:08.969 -06:00 [INF] Route matched with {action = "Get", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Company]] Get(Boolean) on controller ContactManager.API.Controllers.CompanyController (ContactManager.API).
+2021-06-19 23:16:08.974 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Linq.OrderedEnumerable`2[[ContactManager.Repository.Models.Company, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-19 23:16:08.981 -06:00 [INF] Executed action ContactManager.API.Controllers.CompanyController.Get (ContactManager.API) in 11.2619ms
+2021-06-19 23:16:08.981 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.CompanyController.Get (ContactManager.API)'
+2021-06-19 23:16:08.981 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Company?isActive=True - - - 200 - application/json;+charset=utf-8 15.5265ms
+2021-06-19 23:16:27.593 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - -
+2021-06-19 23:16:27.593 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:16:27.594 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:16:27.594 -06:00 [INF] Executing ObjectResult, writing value of type 'null'.
+2021-06-19 23:16:27.594 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 0.3ms
+2021-06-19 23:16:27.594 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:16:27.594 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - - - 204 0 - 1.2026ms
+2021-06-19 23:16:28.589 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/1 - -
+2021-06-19 23:16:28.589 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:16:28.589 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:16:28.589 -06:00 [INF] Executing ObjectResult, writing value of type 'ContactManager.Repository.Models.Contact'.
+2021-06-19 23:16:28.590 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 0.3888ms
+2021-06-19 23:16:28.590 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:16:28.590 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/1 - - - 200 - application/json;+charset=utf-8 0.8931ms
+2021-06-19 23:16:28.754 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Company?isActive=True - -
+2021-06-19 23:16:28.754 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.CompanyController.Get (ContactManager.API)'
+2021-06-19 23:16:28.754 -06:00 [INF] Route matched with {action = "Get", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Company]] Get(Boolean) on controller ContactManager.API.Controllers.CompanyController (ContactManager.API).
+2021-06-19 23:16:28.754 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Linq.OrderedEnumerable`2[[ContactManager.Repository.Models.Company, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-19 23:16:28.754 -06:00 [INF] Executed action ContactManager.API.Controllers.CompanyController.Get (ContactManager.API) in 0.5439ms
+2021-06-19 23:16:28.755 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.CompanyController.Get (ContactManager.API)'
+2021-06-19 23:16:28.755 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Company?isActive=True - - - 200 - application/json;+charset=utf-8 1.1148ms
+2021-06-19 23:20:10.747 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - -
+2021-06-19 23:20:10.747 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:20:10.748 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:20:10.748 -06:00 [INF] Executing ObjectResult, writing value of type 'null'.
+2021-06-19 23:20:10.748 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 0.4116ms
+2021-06-19 23:20:10.748 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:20:10.748 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/0 - - - 204 0 - 1.1201ms
+2021-06-19 23:20:11.720 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Contact/ID/1 - -
+2021-06-19 23:20:11.721 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:20:11.721 -06:00 [INF] Route matched with {action = "GetById", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[ContactManager.Repository.Models.Contact] GetById(Int32) on controller ContactManager.API.Controllers.ContactController (ContactManager.API).
+2021-06-19 23:20:11.721 -06:00 [INF] Executing ObjectResult, writing value of type 'ContactManager.Repository.Models.Contact'.
+2021-06-19 23:20:11.722 -06:00 [INF] Executed action ContactManager.API.Controllers.ContactController.GetById (ContactManager.API) in 0.9143ms
+2021-06-19 23:20:11.722 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.ContactController.GetById (ContactManager.API)'
+2021-06-19 23:20:11.722 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Contact/ID/1 - - - 200 - application/json;+charset=utf-8 2.5863ms
+2021-06-19 23:20:11.930 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44308/Company?isActive=True - -
+2021-06-19 23:20:11.932 -06:00 [INF] Executing endpoint 'ContactManager.API.Controllers.CompanyController.Get (ContactManager.API)'
+2021-06-19 23:20:11.932 -06:00 [INF] Route matched with {action = "Get", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[ContactManager.Repository.Models.Company]] Get(Boolean) on controller ContactManager.API.Controllers.CompanyController (ContactManager.API).
+2021-06-19 23:20:11.933 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Linq.OrderedEnumerable`2[[ContactManager.Repository.Models.Company, ContactManager.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-06-19 23:20:11.933 -06:00 [INF] Executed action ContactManager.API.Controllers.CompanyController.Get (ContactManager.API) in 0.5212ms
+2021-06-19 23:20:11.933 -06:00 [INF] Executed endpoint 'ContactManager.API.Controllers.CompanyController.Get (ContactManager.API)'
+2021-06-19 23:20:11.933 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:44308/Company?isActive=True - - - 200 - application/json;+charset=utf-8 3.1966ms

@@ -35,9 +35,9 @@ namespace ContactManager.Web.Controllers
                 Companies = await GetCompanies()
             };
 
-            return View(model);
+            return View("New", model);
         }
-        private async Task<ActionResult> Upsert(dtoContact contact)
+        private async Task<ActionResult> Upsert(dtoContact contact, string viewName)
         {
             if (ModelState.IsValid)
             {
@@ -52,13 +52,13 @@ namespace ContactManager.Web.Controllers
                 return View(contact);
             }
             contact.Companies = await GetCompanies();
-            return View(contact);
+            return View(viewName, contact);
         }
 
         [HttpPost]
         public async Task<ActionResult> New(dtoContact contact)
         {
-            return await Upsert(contact);
+            return await Upsert(contact, "New");
         }
 
         public async Task<ActionResult> Edit(int Id)
@@ -70,14 +70,14 @@ namespace ContactManager.Web.Controllers
                 return RedirectToAction("New");
             }
             model.Companies = await GetCompanies();
-            return View(model);
+            return View("Edit", model);
         }
 
 
         [HttpPost]
         public async Task<ActionResult> Edit(dtoContact contact)
         {
-            return await Upsert(contact);
+            return await Upsert(contact, "Edit");
         }
     }
 }

@@ -21,21 +21,21 @@ namespace ContactManager.Web.Controllers
         public async Task<ActionResult> Index()
         {
             var model = await _contactService.GetContacts();
-            return View(model.OrderBy(c => c.Name).ToList());
+            return View("Index", model.OrderBy(c => c.Name).ToList());
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "MNP Contact Manager page.";
 
-            return View();
+            return View("About");
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Contact MNP at 403-222-3333.";
 
-            return View();
+            return View("Contact");
         }
     }
 }

@@ -39,7 +39,7 @@ namespace ContactManager.Web.Proxy
         public async Task<dtoContact> GetContactById(int Id)
         {
             var uri = $"{_appSettings.ContactUrl}/ID/{Id}";
-            _httpClient.BaseAddress = new System.Uri(uri);
+            //_httpClient.BaseAddress = new System.Uri(uri);
             var response = await _httpClient.GetAsync(uri);
             var responseStr = await response.Content.ReadAsStringAsync();
             return string.IsNullOrWhiteSpace(responseStr) ?
@@ -49,7 +49,7 @@ namespace ContactManager.Web.Proxy
         public async Task<List<dtoContact>> GetContacts()
         {
             var uri = $"{_appSettings.ContactUrl}";
-            _httpClient.BaseAddress = new System.Uri(uri);
+            //_httpClient.BaseAddress = new System.Uri(uri);
             var response = await _httpClient.GetAsync(uri);
             var responseStr = await response.Content.ReadAsStringAsync();
             return string.IsNullOrWhiteSpace(responseStr) ?
