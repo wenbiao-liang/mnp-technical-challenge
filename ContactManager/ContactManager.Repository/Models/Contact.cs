@@ -11,7 +11,8 @@ namespace ContactManager.Repository.Models
         public int Id { get; set; }
         public string Address { get; set; }
         public string Comments { get; set; }
-        // required
+
+        // required, don't know the database schema, so I am not sure if this should be a CompanyId
         public string Company { get; set; }
         public string Email { get; set; }
         public DateTime LastDateContacted { get; set; }
@@ -28,7 +29,7 @@ namespace ContactManager.Repository.Models
         }
         /// <summary>
         /// try to **simulate** server side validation on the Contact's fields. 
-        /// With a DB, these validation rules can be shift to a SP.
+        /// With a real DB, these validation rules can be shifted to a SP.
         /// The error messages should be in a resource file
         /// </summary>
         /// <returns></returns>
@@ -36,7 +37,7 @@ namespace ContactManager.Repository.Models
         {
             errorMessage = string.Empty;
             var sbError = new StringBuilder();
-            if (string.IsNullOrWhiteSpace(Name) || Name.Length > 50)
+            if (string.IsNullOrWhiteSpace(Name) || Name.Length > 50 || Name.Length < 5)
             {
                 // required
                 sbError.AppendLine($"Contact name cannot be empty or longer than 50 characters");
@@ -53,7 +54,7 @@ namespace ContactManager.Repository.Models
             {
                 sbError.AppendLine($"Contact company cannot be longer than 50 characters");
             }
-            if (!string.IsNullOrWhiteSpace(Comments) && Comments.Length > 255)
+            if (!string.IsNullOrWhiteSpace(Email) && Email.Length > 255)
             {
                 sbError.AppendLine($"Contact email cannot be longer than 255 characters");
             }

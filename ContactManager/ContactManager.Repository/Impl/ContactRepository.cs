@@ -37,12 +37,6 @@ namespace ContactManager.Repository.Impl
             return await Task.Run(() => GetContacts());
         }
 
-        public virtual async Task<Contact> GetContactById(int Id)
-        {
-            var contacts = await GetContacts();
-            return contacts.FirstOrDefault(c => c.Id == Id);
-        }
-
         public virtual async Task<Contact> InsertContact(Contact contact)
         {
             var contacts = await GetContacts();

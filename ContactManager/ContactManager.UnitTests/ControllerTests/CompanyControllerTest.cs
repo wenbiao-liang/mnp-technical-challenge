@@ -22,7 +22,7 @@ namespace ContactManager.UnitTests.RepositoryTests
             _loggerMock = new Mock<ILogger<CompanyController>>();
         }
         [Fact]
-        public async void Get_Company_success()
+        public async void GetCompanies_success()
         {
             // Arrange
             var fakeList = new List<Company>() { 

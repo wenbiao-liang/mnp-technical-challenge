@@ -31,7 +31,8 @@ namespace ContactManager.API.Controllers
         [HttpGet("ID/{Id}")]
         public async Task<Contact> GetById(int Id)
         {
-            return await _contactRepository.GetContactById(Id);
+            var contacts = await _contactRepository.Contacts();
+            return contacts.FirstOrDefault(c => c.Id == Id);
         }
 
         [HttpPut("Update")]
@@ -54,7 +55,7 @@ namespace ContactManager.API.Controllers
                     if (fakeContacts.Any(c => c.Name == contact.Name))
                     {
                         result = false;
-                        errorMessage = $"Contact with the same name already exists.";
+                        errorMessage = $"Contact with the same name already exists.";   // should be in a resource file
                     }
                     else
                     {

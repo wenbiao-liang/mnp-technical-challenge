@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.Web", "ContactManager.Web\ContactManager.Web.csproj", "{4D63ABCB-7B6D-466E-B5B7-9F3C3FD2F6DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.API", "ContactManager.API\ContactManager.API.csproj", "{08406477-A61A-4563-B659-EA550EE0522F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactManager.API", "ContactManager.API\ContactManager.API.csproj", "{08406477-A61A-4563-B659-EA550EE0522F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.Repository", "ContactManager.Repository\ContactManager.Repository.csproj", "{D8724FEA-8004-413E-8B35-7E4DFAF64446}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactManager.Repository", "ContactManager.Repository\ContactManager.Repository.csproj", "{D8724FEA-8004-413E-8B35-7E4DFAF64446}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.UnitTests", "ContactManager.UnitTests\ContactManager.UnitTests.csproj", "{2558B632-7CCE-4254-8B3D-BAF2136ECAA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactManager.UnitTests", "ContactManager.UnitTests\ContactManager.UnitTests.csproj", "{2558B632-7CCE-4254-8B3D-BAF2136ECAA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{96B71B4F-48B5-4525-B484-D0435DEBB91B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
