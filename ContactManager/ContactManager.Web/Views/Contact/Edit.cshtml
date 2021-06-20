@@ -4,97 +4,80 @@
     ViewBag.Title = "MNP Contact Manager - Edit Contact";
 }
 
-@using (Html.BeginForm("Edit", "Contact", FormMethod.Post))
+@using (Html.BeginForm("Edit", "Contact", new { Id = Model.Id}, FormMethod.Post))
 {
-<fieldset class="border p-2">
-    <legend class="w-auto">Contact Details</legend>
     @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
-    <div class="control-group">
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(m => Model.Id)
-        @Html.ValidationSummary(true)
-
-        <div class="container my-container">
-            <div class="row my-row justify-content-left">
-                <div class="col-sm-4 my-col">
-                    @Html.LabelFor(m => Model.Name, new { @class = "col-sm-2 col-form-label col-form-label-sm text-left justify-content-start" })
-                    <div class="col-sm-2">
-                        @Html.EditorFor(m => Model.Name)
-                        @Html.ValidationMessageFor(m => Model.Name)
-                    </div>
-                </div>
-                <div class="col-sm-4  my-col">
-                    @Html.LabelFor(m => Model.Address, new { @class = "col-sm-3 col-form-label col-form-label-sm text-left justify-content-start" })
-                    <div class="col-sm-2">
-                        @Html.TextBoxFor(m => Model.Address)
-                        @Html.ValidationMessageFor(m => Model.Address)
-                    </div>
-                </div>
-
-                <div class="col-sm-4  my-col">
-                    @Html.LabelFor(m => Model.LastDateContacted, new { @class = "col-sm-2 col-form-label col-form-label-sm text-left justify-content-start" })
-                    <div class="col-sm-2">
-                        @Html.TextBoxFor(m => Model.LastDateContacted)
-                        @Html.ValidationMessageFor(m => Model.LastDateContacted)
-                    </div>
-                </div>
-                </div>
-
-            <div class="row my-row justify-content-right glyphicon-align-center">
-                <div class="col-sm-4  my-col">
-                    @Html.LabelFor(m => Model.Title, new { @class = "col-sm-4 col-form-label col-form-label-sm text-left justify-content-start" })
-                    <div class="col-sm-2">
-                        @Html.TextBoxFor(m => Model.Title)
-                        @Html.ValidationMessageFor(m => Model.Title)
-                    </div>
-                </div>
-                <div class="col-sm-4  my-col">
-                    @Html.LabelFor(m => Model.Phone)
-                    @Html.TextBoxFor(m => Model.Phone)
-                    @Html.ValidationMessageFor(m => Model.Phone)
-                </div>
+    <div class="form-horizontal">
+        <hr />
+        <h4>Contact Details</h4>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
-            <div class="row">
-                <div class="col-sm-4  my-col">
-                    @Html.LabelFor(m => Model.Company, new { @class = "col-sm-3 col-form-label col-form-label-sm text-left justify-content-start" })
-                    @Html.TextBoxFor(m => Model.Company)
-                    @Html.ValidationMessageFor(m => Model.Company)
-                </div>
-                <div class="col-sm-4 my-col">
-                    @Html.LabelFor(m => Model.Email)
-                    @Html.TextBoxFor(m => Model.Email)
-                    @Html.ValidationMessageFor(m => Model.Email)
-                </div>
-                <div class="col-sm-4 my-col">
-                    @Html.LabelFor(m => Model.Comments)
-                    @Html.TextBoxFor(m => Model.Comments)
-                    @Html.ValidationMessageFor(m => Model.Comments)
-                </div>
+
+            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            @Html.LabelFor(model => model.LastDateContacted, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.LastDateContacted, new
+                {
+                    htmlAttributes = new
+                    {
+                        @class = "form-control datepicker",
+                        @id = "LastDateContacted"
+                    }
+                })
+            </div>
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+
+            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            @Html.LabelFor(model => model.Comments, htmlAttributes: new { @class = "control-label col-md-2" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Company, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.DropDownListFor(model => model.Company, new SelectList(Model.Companies, "Value", "Text"), htmlAttributes: new { @class = "form-control", @id = "Company" })
+            </div>
+
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+
+            <div class="col-md-4">
+                @Html.TextAreaFor(model => model.Comments, new { @class = "form-control form-control-full", @rows = 6, style = "max-width:100%", })
             </div>
         </div>
         <div>
             <div class="form-group padding-right-sm">
-                <div class="col-sm-offset-2 col-sm-12 col-sm-pull-4">
-                    <input type="button" value="Cancel" class="btn btn-default pull-right padding-right-sm" onclick="location.href = '/Home/Index'" />
-                    <input type="submit" value="Create" class="btn btn-default pull-right" />
+                <div class="col-md-offset-2 col-md-12 col-md-pull-3">
+                    <input type="button" value="Cancel" class="btn btn-default pull-right" onclick="location.href = '/Home/Index'" />
+                    <input type="submit" value="Save" class="btn btn-default pull-right" />
                 </div>
             </div>
         </div>
     </div>
-    </fieldset>
 }
-
-<style>
-    .my-container {
-        border:1px solid green;
-    }
-    .my-row {
-        border: 1px solid red;
-        height: 100px
-
-    }
-    .my-col {
-        border: 1px solid blue;
-    }
-</style>
+<script type="text/javascript">
+    $(function () {
+        $("#LastDateContacted").datepicker({ dateFormat: 'mm-dd-yy' });
+    });
+</script>

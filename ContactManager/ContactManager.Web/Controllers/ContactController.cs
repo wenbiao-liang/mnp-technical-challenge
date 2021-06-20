@@ -1,7 +1,9 @@
 ﻿using ContactManager.Web.Models;
+using ContactManager.Web.Proxy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -9,68 +11,73 @@ namespace ContactManager.Web.Controllers
 {
     public class ContactController : Controller
     {
-        // this list should be taken from API
-        private List<SelectListItem> companies = new List<SelectListItem>()
+        private IApiService _contactService;
+        public ContactController(IApiService contactService)
         {
-            new SelectListItem () { Value ="HP", Text = "HP"},
-            new SelectListItem () { Value ="Microsoft", Text = "Microsoft"},
-            new SelectListItem () { Value ="Disney", Text = "Disney"},
-        };
-        public ActionResult New()
+            _contactService = contactService;
+        }
+
+        // ugly primitive cache for companies
+        private static IEnumerable<SelectListItem> _companies = null;
+        public async Task<IEnumerable<SelectListItem>> GetCompanies()
+        {
+            if (_companies == null)
+            {
+                var companies = await _contactService.GetCompanies(true);
+                _companies = companies.Select(x => new SelectListItem() { Value = x.Name, Text = x.Name });
+            }
+            return _companies;
+        }
+        public async Task<ActionResult> New()
         {
             var model = new dtoContact()
             {
-                Id = 0,
-                Name = "",
-                Title = "",
-                Company = "",
-                Phone = "",
-                Address = "",
-                Email = "",
-                LastDateContacted = DateTime.Today,
-                Companies = companies
+                Companies = await GetCompanies()
             };
 
             return View(model);
         }
-
-        [HttpPost]
-        public ActionResult New(dtoContact contact)
+        private async Task<ActionResult> Upsert(dtoContact contact)
         {
             if (ModelState.IsValid)
             {
-                var nameAlreadyExists = "AAAAA".Equals(contact.Name);
-                // update db
-                if (nameAlreadyExists)
+                var requestResult = await _contactService.UpdateContact(contact);
+                if (requestResult.Result)
                 {
-                    //fake adding error message to ModelState
-                    ModelState.AddModelError("Name", "Contact Name Already Exists.");
-
-                    contact.Companies = companies;
-                    return View(contact);
+                    return RedirectToAction("Index", "Home");
                 }
-                return RedirectToAction("Index", "Home");
+
+                ModelState.AddModelError("", requestResult.ErrorMessage);
+                contact.Companies = await GetCompanies();
+                return View(contact);
             }
-            contact.Companies = companies;
+            contact.Companies = await GetCompanies();
             return View(contact);
         }
 
-        public ActionResult Edit(int ID)
+        [HttpPost]
+        public async Task<ActionResult> New(dtoContact contact)
         {
-            var model = new dtoContact()
-            {
-                Id = ID,
-                Name = "",
-                Title = "",
-                Company = "",
-                Phone = "",
-                Address = "",
-                Email = "",
-                LastDateContacted = DateTime.Today,
-                Companies = companies
-            };
+            return await Upsert(contact);
+        }
 
+        public async Task<ActionResult> Edit(int Id)
+        {
+            var model = await _contactService.GetContactById(Id);
+
+            if (model == null)
+            {
+                return RedirectToAction("New");
+            }
+            model.Companies = await GetCompanies();
             return View(model);
+        }
+
+
+        [HttpPost]
+        public async Task<ActionResult> Edit(dtoContact contact)
+        {
+            return await Upsert(contact);
         }
     }
 }

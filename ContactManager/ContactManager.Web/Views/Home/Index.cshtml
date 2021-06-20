@@ -30,9 +30,9 @@
 
         @foreach (var item in Model)
         {
-        <tr onclick="location.href = '@(Url.Action("Edit", "Contact", new { Id = item.ID }))'">
+        <tr onclick="location.href = '@(Url.Action("Edit", "Contact", new { Id = item.Id }))'">
             <td>
-                @Html.HiddenFor(m => item.ID)
+                @Html.HiddenFor(m => item.Id)
             </td>
             <td>
                 <div class="">

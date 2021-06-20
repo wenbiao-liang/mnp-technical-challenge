@@ -53,5 +53,16 @@ namespace ContactManager.Web.Models
 
         public IEnumerable<SelectListItem> Companies { get; set; }
 
+        public dtoContact()
+        {
+            Id = 0;
+            Name = string.Empty;
+            Title = string.Empty;
+            Company = string.Empty;
+            Phone = string.Empty;
+            Address = string.Empty;
+            Email = string.Empty;
+            LastDateContacted = DateTime.Today;
+        }
     }
 }
